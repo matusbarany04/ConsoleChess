@@ -26,9 +26,6 @@ public class King  extends Piece  {
     @Override
     public Point[] getAllPossiblePositionsIn(Board board) {
         ArrayList<Point> positions = new ArrayList<>();
-
-        positions.addAll(Arrays.asList(new Rock(position, PieceColor.BLACK).getAllPossiblePositionsIn(board)));
-        positions.addAll(Arrays.asList(new Bishop(position,PieceColor.BLACK).getAllPossiblePositionsIn(board)));
         for (int i = 0; i< x.length;i++){
             try {
                 Point point = new Point(position.getX() + x[i], position.getY() + y[i]);
